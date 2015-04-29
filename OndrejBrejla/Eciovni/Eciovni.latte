@@ -204,9 +204,9 @@
         </table>
     </div>
 
-    <div style="text-align: right; padding-right: 100px;">
+    <div n:ifset="$stampImageUrl" style="text-align: right; padding-right: 100px;">
         <div style="font-weight: bold;">Vystavil, razítko, podpis:</div>
-        <img src="" alt="Razitko s podpisem" />
+        <img src="{$stampImageUrl}" alt="Razitko s podpisem" />
     </div>
 </div>
 </body>

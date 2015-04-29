@@ -46,6 +46,16 @@ class Eciovni extends Control {
         $this->templatePath = $templatePath;
     }
 
+    /**
+     * Setter for stamp image URL
+     *
+     * @param string $stampImageUrl
+     */
+    public function setStampImage($stampImageUrl)
+    {
+        $this->template->stampImageUrl = $stampImageUrl;
+    }
+
 
     /**
      * Exports Invoice template via passed mPDF.
