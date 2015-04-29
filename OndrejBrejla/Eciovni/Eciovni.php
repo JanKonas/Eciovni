@@ -249,6 +249,15 @@ class Eciovni extends Control {
         return $sum;
     }
 
+    /**
+     * Use Eciovni outside of Presenter
+     */
+    protected function createTemplate()
+    {
+        $template =  new \Nette\Bridges\ApplicationLatte\Template(new \Latte\Engine);
+        return $template;
+    }
+
 }
 
 class IllegalStateException extends \RuntimeException {
