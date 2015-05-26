@@ -144,6 +144,17 @@
                     <tr>
                         <td width="350">
                             <span style="color: #1A5DAC; font-weight: bold; font-size: 12px;">Odběratel:</span>
+                            <table style="font-weight: bold; margin-bottom: 15px;">
+                                <tr n:if="$customerName">
+                                    <td>{$customerName}</td>
+                                </tr>
+                                <tr n:if="$customerStreet || $customerHouseNumber">
+                                    <td>{$customerStreet} {$customerHouseNumber}</td>
+                                </tr>
+                                <tr n:if="$customerCity || $customerZip">
+                                    <td>{$customerCity}, {$customerZip}</td>
+                                </tr>
+                            </table>
                             <table style="margin-bottom: 15px;">
                                 <tr n:if="$customerIn">
                                     <td>IČ:</td>
@@ -156,18 +167,6 @@
                                 <tr n:if="$customerAccountNumber">
                                     <td>Číslo účtu:</td>
                                     <td>{$customerAccountNumber}</td>
-                                </tr>
-                            </table>
-
-                            <table style="font-weight: bold; margin-bottom: 15px;">
-                                <tr n:if="$customerName">
-                                    <td>{$customerName}</td>
-                                </tr>
-                                <tr n:if="$customerStreet || $customerHouseNumber">
-                                    <td>{$customerStreet} {$customerHouseNumber}</td>
-                                </tr>
-                                <tr n:if="$customerCity || $customerZip">
-                                    <td>{$customerCity}, {$customerZip}</td>
                                 </tr>
                             </table>
                         </td>
