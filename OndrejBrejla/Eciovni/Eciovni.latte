@@ -179,20 +179,20 @@
         <table style="width: 100%;">
             <tr>
                 <td><strong>Položka</strong></td>
-                <td style="text-align: right;"><strong>Cena/jedn.</strong></td>
-                <td style="text-align: right;"><strong>Počet</strong></td>
-                <td style="text-align: right;"><strong>%DPH</strong></td>
-                <td style="text-align: right;"><strong>DPH</strong></td>
-                <td style="text-align: right;"><strong>Cena (Kč)</strong></td>
+                <td style="text-align: right; padding: 0 6px;"><strong>Cena/jedn.</strong></td>
+                <td style="text-align: right; padding: 0 6px;"><strong>Počet</strong></td>
+                <td style="text-align: right; padding: 0 6px;"><strong>%DPH</strong></td>
+                <td style="text-align: right; padding: 0 6px;"><strong>DPH</strong></td>
+                <td style="text-align: right; padding: 0 6px;"><strong>Cena (Kč)</strong></td>
             </tr>
             {foreach $items as $item}
             <tr>
                 <td>{$item->getDescription()}</td>
-                <td style="text-align: right;">{$item->countUntaxedUnitValue()|round}</td>
-                <td style="text-align: right;">{$item->getUnits()|round}</td>
-                <td style="text-align: right;">{$item->getTax()->inUpperDecimal() * 100 - 100|round}</td>
-                <td style="text-align: right;">{$item->countTaxValue()|round}</td>
-                <td style="text-align: right;">{$item->countFinalValue()|round}</td>
+                <td style="text-align: right; padding: 0 6px;">{$item->countUntaxedUnitValue()|round}</td>
+                <td style="text-align: right; padding: 0 6px;">{$item->getUnits()|round}</td>
+                <td style="text-align: right; padding: 0 6px;">{$item->getTax()->inUpperDecimal() * 100 - 100|round}</td>
+                <td style="text-align: right; padding: 0 6px;">{$item->countTaxValue()|round}</td>
+                <td style="text-align: right; padding: 0 6px;">{$item->countFinalValue()|round}</td>
             </tr>
             {/foreach}
         </table>
