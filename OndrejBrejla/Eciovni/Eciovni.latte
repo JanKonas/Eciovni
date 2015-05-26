@@ -57,20 +57,26 @@
     }
 </style>
 <div>
-    <div style="text-align: right; border-bottom: 2px solid #000000; color: #1A5DAC; font-weight: bold; font-size: 20px;">
-        <div n:ifset="$logoImageUrl" style="width: 250px; float: left;"><img src="{$logoImageUrl}" alt="Nikon škola"></div>
-        {$title} - {$id}
-    </div>
+    <table style="width: 100%; border-bottom: 2px solid #000000; padding-bottom: 11px;">
+        <tr>
+            <td n:ifset="$logoImageUrl" style="width: 262px; vertical-align: bottom;">
+                <img src="{$logoImageUrl}" style="margin: 0; padding: 0;" alt="Nikon škola">
+            </td>
+            <td style="text-align: right; color: #1A5DAC; font-weight: bold; font-size: 20px; vertical-align: bottom;">
+                {if !empty($title)}{$title} - {/if}Daňový doklad č.&nbsp;{$id}
+            </td>
+        </tr>
+    </table>
 
     <table>
         <tr>
             <td width="40%">
                 <span style="color: #1A5DAC; font-weight: bold; font-size: 12px;">Dodavatel:</span>
-                <div n:ifset="$supplierImageUrl" style="width: 70px; float: left;">
-                    <img src="{$supplierImageUrl}" style="width: 60px;" alt="">
-                </div>
-                <table style="font-weight: bold; margin-bottom: 15px;">
+                <table style="font-weight: bold; margin: 18px 0;">
                     <tr>
+                        <td n:ifset="$supplierImageUrl" rowspan="3" style="padding-right: 18px">
+                            <img src="{$supplierImageUrl}" style="width: 60px;" alt="">
+                        </td>
                         <td>{$supplierName}</td>
                     </tr>
                     <tr>
