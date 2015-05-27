@@ -110,6 +110,10 @@
                         <td>Forma úhrady:</td>
                         <td style="text-align: center;">Platební brána GoPay</td>
                     </tr>
+                    <tr n:if="$orderNumber">
+                        <td>Číslo objednávky:</td>
+                        <td style="text-align: center;">{$orderNumber}</td>
+                    </tr>
                     <tr n:if="$dateOfIssuance">
                         <td>Datum vystavení:</td>
                         <td style="text-align: center;">{$dateOfIssuance}</td>

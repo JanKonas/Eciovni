@@ -44,6 +44,9 @@ class DataBuilder extends Object {
     /** @var DateTime */
     private $dateOfVatRevenueRecognition;
 
+    /** @var string */
+    private $orderNumber;
+
     /** @var Item[] */
     private $items = array();
 
@@ -120,6 +123,17 @@ class DataBuilder extends Object {
      */
     public function setDateOfVatRevenueRecognition(DateTime $dateOfTaxablePayment) {
         $this->dateOfVatRevenueRecognition = $dateOfTaxablePayment;
+        return $this;
+    }
+
+    /**
+     * Sets the order number.
+     *
+     * @param string $orderNumber
+     * @return DataBuilder
+     */
+    public function setOrderNumber($orderNumber) {
+        $this->orderNumber = $orderNumber;
         return $this;
     }
 
@@ -211,6 +225,15 @@ class DataBuilder extends Object {
      */
     public function getDateOfVatRevenueRecognition() {
         return $this->dateOfVatRevenueRecognition;
+    }
+
+    /**
+     * Returns the order number.
+     *
+     * @return string
+     */
+    public function getOrderNumber() {
+        return $this->orderNumber;
     }
 
     /**
