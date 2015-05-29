@@ -85,6 +85,9 @@
                     <tr>
                         <td>{$supplierCity}, {$supplierZip}</td>
                     </tr>
+                    <tr>
+                        <td>{$supplierCountry}</td>
+                    </tr>
                 </table>
 
                 <table style="color: #1A5DAC; margin-bottom: 15px;">
@@ -157,6 +160,9 @@
                                 </tr>
                                 <tr n:if="$customerCity || $customerZip">
                                     <td>{$customerCity}, {$customerZip}</td>
+                                </tr>
+                                <tr n:if="$customerCountry">
+                                    <td>{$customerCountry}</td>
                                 </tr>
                             </table>
                             <table style="margin-bottom: 15px;">

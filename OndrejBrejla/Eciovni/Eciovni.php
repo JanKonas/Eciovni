@@ -181,6 +181,7 @@ class Eciovni extends Control {
         $template->supplierHouseNumber = $supplier->getHouseNumber();
         $template->supplierCity = $supplier->getCity();
         $template->supplierZip = $supplier->getZip();
+        $template->supplierCountry = $supplier->getCountry();
         $template->supplierIn = $supplier->getIn();
         $template->supplierTin = $supplier->getTin();
         $template->supplierAccountNumber = $supplier->getAccountNumber();
@@ -199,6 +200,7 @@ class Eciovni extends Control {
         $template->customerHouseNumber = $customer->getHouseNumber();
         $template->customerCity = $customer->getCity();
         $template->customerZip = $customer->getZip();
+        $template->customerCountry = $customer->getCountry();
         $template->customerIn = $customer->getIn();
         $template->customerTin = $customer->getTin();
         $template->customerAccountNumber = $customer->getAccountNumber();
