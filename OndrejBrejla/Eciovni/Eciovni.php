@@ -161,6 +161,7 @@ class Eciovni extends Control {
         $template->id = $this->data->getId();
         $template->items = $this->data->getItems();
         $template->orderNumber = $this->data->getOrderNumber();
+        $template->paymentChannel = $this->data->getPaymentChannel();
         $this->generateSupplier($template);
         $this->generateCustomer($template);
         $this->generateDates($template);

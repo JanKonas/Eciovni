@@ -47,6 +47,9 @@ class DataImpl extends Object implements Data {
     /** @var string */
     private $orderNumber;
 
+    /** @var string */
+    private $paymentChannel;
+
     /** @var Item[] */
     private $items = array();
 
@@ -62,6 +65,7 @@ class DataImpl extends Object implements Data {
         $this->dateOfIssuance = $dataBuilder->getDateOfIssuance();
         $this->dateOfVatRevenueRecognition = $dataBuilder->getDateOfVatRevenueRecognition();
         $this->orderNumber = $dataBuilder->getOrderNumber();
+        $this->paymentChannel = $dataBuilder->getPaymentChannel();
         $this->items = $dataBuilder->getItems();
     }
 
@@ -165,6 +169,15 @@ class DataImpl extends Object implements Data {
      */
     public function getOrderNumber() {
         return $this->orderNumber;
+    }
+
+    /**
+     * Returns the payment channel.
+     *
+     * @return string
+     */
+    public function getPaymentChannel() {
+        return $this->paymentChannel;
     }
 
     /**

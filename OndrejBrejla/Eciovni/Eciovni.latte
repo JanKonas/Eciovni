@@ -111,7 +111,7 @@
                 <table style="width: 100%;">
                     <tr>
                         <td>Forma úhrady:</td>
-                        <td style="text-align: center;">Platební brána GoPay</td>
+                        <td style="text-align: center;">{$paymentChannel}</td>
                     </tr>
                     <tr n:if="$orderNumber">
                         <td>Číslo objednávky:</td>
@@ -159,7 +159,7 @@
                                     <td>{$customerStreet} {$customerHouseNumber}</td>
                                 </tr>
                                 <tr n:if="$customerCity || $customerZip">
-                                    <td>{$customerCity}, {$customerZip}</td>
+                                    <td>{$customerCity}{if $customerCity && $customerZip}, {/if}{$customerZip}</td>
                                 </tr>
                                 <tr n:if="$customerCountry">
                                     <td>{$customerCountry}</td>
