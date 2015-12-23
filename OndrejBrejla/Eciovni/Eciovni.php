@@ -249,9 +249,9 @@ class Eciovni extends Control {
         $template->finalTaxValue = $this->countFinalTaxValue();
         $template->finalValue = $this->countFinalValues();
         if ($this->exchangeRate) {
-            $template->finalUntaxedValue = $template->finalUntaxedValue * $this->exchangeRate;
-            $template->finalTaxValue = $template->finalTaxValue * $this->exchangeRate;
-            $template->finalValue = $template->finalValue * $this->exchangeRate;
+            $template->finalUntaxedValueCZK = $template->finalUntaxedValue * $this->exchangeRate;
+            $template->finalTaxValueCZK = $template->finalTaxValue * $this->exchangeRate;
+            $template->finalValueCZK = $template->finalValue * $this->exchangeRate;
             $template->exchangeRate = $this->exchangeRate;
         }
     }

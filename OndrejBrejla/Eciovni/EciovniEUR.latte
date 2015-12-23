@@ -212,8 +212,8 @@
         <table style="width: 100%;">
             <tr>
                 <th style="width: 50%;"></th>
-                <th style="width: 25%;"><strong>EUR (&euro;)</strong></th>
-                <th style="width: 25%;"><strong>CZK (Kč)</strong></th>
+                <th style="width: 25%; text-align: right;"><strong>EUR (&euro;)</strong></th>
+                <th style="width: 25%; text-align: right;"><strong>CZK (Kč)</strong></th>
             </tr>
             <tr>
                 <td>Celkem bez DPH:</td>
@@ -232,7 +232,7 @@
             </tr>
         </table>
     </div>
-    <p>Kurz pro přepočet na CZK: {$exchangeRate|round:3}</p>
+    <div style="margin: 10px 0;">Kurz pro přepočet na CZK: {$exchangeRate|round:3}</div>
 
     <table style="width: 100%;">
         <tr>
