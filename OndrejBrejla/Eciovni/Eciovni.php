@@ -23,17 +23,24 @@ class Eciovni extends Control {
     /** @var string */
     private $templatePath;
 
+    /** @var float */
+    private $exchangeRate;
+
     /**
      * Initializes new Invoice.
      *
      * @param Data $data
      */
-    public function __construct(Data $data = NULL) {
+    public function __construct(Data $data = NULL, $exchangeRate = NULL) {
         if ($data !== NULL) {
             $this->setData($data);
         }
-
-        $this->templatePath = __DIR__ . '/Eciovni.latte';
+        $this->exchangeRate = $exchangeRate;
+        if ($exchangeRate) {
+            $this->templatePath = __DIR__ . '/EciovniEUR.latte';
+        } else {
+            $this->templatePath = __DIR__ . '/Eciovni.latte';
+        }
     }
 
     /**
@@ -241,6 +248,12 @@ class Eciovni extends Control {
         $template->finalUntaxedValue = $this->countFinalUntaxedValue();
         $template->finalTaxValue = $this->countFinalTaxValue();
         $template->finalValue = $this->countFinalValues();
+        if ($this->exchangeRate) {
+            $template->finalUntaxedValue = $template->finalUntaxedValue * $this->exchangeRate;
+            $template->finalTaxValue = $template->finalTaxValue * $this->exchangeRate;
+            $template->finalValue = $template->finalValue * $this->exchangeRate;
+            $template->exchangeRate = $this->exchangeRate;
+        }
     }
 
     /**
