@@ -301,7 +301,7 @@ class Eciovni extends Control {
      */
     private function isSomethingTaxed() {
         foreach ($this->data->items as $item) {
-            if ($item->getTax()) {
+            if (abs($item->getTax()->inUpperDecimal()) < 0.0001) {
                 return true;
             }
         }
