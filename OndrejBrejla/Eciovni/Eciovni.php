@@ -169,6 +169,7 @@ class Eciovni extends Control {
         $template->items = $this->data->getItems();
         $template->orderNumber = $this->data->getOrderNumber();
         $template->paymentChannel = $this->data->getPaymentChannel();
+        $template->isTaxed = $this->isSomethingTaxed();
         $this->generateSupplier($template);
         $this->generateCustomer($template);
         $this->generateDates($template);
@@ -293,6 +294,18 @@ class Eciovni extends Control {
             $sum += $item->countFinalValue();
         }
         return $sum;
+    }
+
+    /**
+     * @return bool
+     */
+    private function isSomethingTaxed() {
+        foreach ($this->data->items as $item) {
+            if ($item->getTax()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
