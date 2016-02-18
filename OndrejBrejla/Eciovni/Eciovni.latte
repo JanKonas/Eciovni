@@ -113,6 +113,10 @@
                         <td>Forma úhrady:</td>
                         <td style="text-align: center;">{$paymentChannel}</td>
                     </tr>
+                    <tr n:if="$paymentChannel == 'Bankovním převodem'">
+                        <td>Variabilní symbol:</td>
+                        <td style="text-align: center;">{$id}</td>
+                    </tr>
                     <tr n:if="$orderNumber">
                         <td>Číslo objednávky:</td>
                         <td style="text-align: center;">{$orderNumber}</td>

@@ -113,6 +113,10 @@
                         <td>Forma úhrady:</td>
                         <td style="text-align: center;">{$paymentChannel}</td>
                     </tr>
+                    <tr n:if="$paymentChannel == 'Bankovním převodem'">
+                        <td>Variabilní symbol:</td>
+                        <td style="text-align: center;">{$id}</td>
+                    </tr>
                     <tr n:if="$orderNumber">
                         <td>Číslo objednávky:</td>
                         <td style="text-align: center;">{$orderNumber}</td>
@@ -245,15 +249,10 @@
             <td style="width: 50%; padding: 0; margin: 0; vertical-align: top;">
                 <table>
                     <tr>
-                        <td colspan="2" style="vertical-align: top;">Bankovní spojení (platba v EUR): </td>
+                        <td style="vertical-align: top; margin-right: 5px;">Bankovní spojení (Slovenská republika): </td>
                     </tr>
                     <tr>
-                        <td style="vertical-align: top; margin-right: 5px;">Slovenská republika: </td>
                         <td style="vertical-align: top;">SK93 1100 0000 0029 2685 3356</td>
-                    </tr>
-                    <tr>
-                        <td style="vertical-align: top; margin-right: 5px;">Česká republika: </td>
-                        <td style="vertical-align: top;">302340/2020</td>
                     </tr>
                 </table>
             </td>
