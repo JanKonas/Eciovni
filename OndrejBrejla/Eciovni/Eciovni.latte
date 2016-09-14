@@ -117,6 +117,9 @@
                         <td>Variabilní symbol:</td>
                         <td style="text-align: center;">{$id}</td>
                     </tr>
+                    <tr n:if="$paymentChannel == 'Bankovním převodem'">
+                        <td colspan="2">&nbsp;</td>
+                    </tr>
                     <tr n:if="$orderNumber">
                         <td>Číslo objednávky:</td>
                         <td style="text-align: center;">{$orderNumber}</td>
