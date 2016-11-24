@@ -19,7 +19,7 @@
     "require": {
         "php": ">=5.3.1",
         "nette/nette": ">=2.0.0",
-        "mpdf/mpdf": "dev-nikonschool"
+        "mpdf/mpdf": "dev-nikon7"
     },
     "autoload": {
         "psr-0": {
