@@ -72,14 +72,14 @@
         <tr>
             <td width="40%">
                 <span style="color: #1A5DAC; font-weight: bold; font-size: 12px;">Dodavatel:</span>
-                <table style="font-weight: bold; margin: 18px 0;">
-                    <tr>
+                <table style="margin: 18px 0; width: 100%;">
+                    <tr style="font-weight: bold;">
                         <td n:ifset="$supplierImageUrl" rowspan="4" style="padding-right: 18px; vertical-align: top;">
                             <img src="{$supplierImageUrl}" style="width: 60px;" alt="">
                         </td>
                         <td>Nikon CEE GmbH</td>
                     </tr>
-                    <tr>
+                    <tr style="font-weight: bold;">
                         <td>Wagenseilgasse 5-7<br>1120 Vídeň<br>Rakouská republika</td>
                     </tr>
                     <tr>
@@ -139,21 +139,6 @@
                 </table>
             </td>
             <td width="60%" align="right">
-                <table style="margin-bottom: 15px;" n:if="$constantSymbol || $specificSymbol || $variableSymbol">
-                    <tr n:if="$variableSymbol">
-                        <td style="text-align: right;">Variabilní symbol:</td>
-                        <td style="text-align: center;">{$variableSymbol}</td>
-                    </tr>
-                    <tr n:if="$specificSymbol">
-                        <td style="text-align: right;">Specifický symbol:</td>
-                        <td style="text-align: center;">{$specificSymbol}</td>
-                    </tr>
-                    <tr n:if="$constantSymbol">
-                        <td style="text-align: right;">Konstantní symbol:</td>
-                        <td style="text-align: center;">{$constantSymbol}</td>
-                    </tr>
-                </table>
-
                 <table style="border: 3px solid #000000;">
                     <tr>
                         <td width="350">
@@ -193,6 +178,21 @@
                 <table style="margin-top: 15px;" n:if="!$isTaxed">
                     <tr>
                         <td width="350" style="text-align: center;">Faktura je v režimu přenesené daňové povinnosti.<br>Daň odvede zákazník.</td>
+                    </tr>
+                </table>
+
+                <table style="margin-bottom: 15px;" n:if="$constantSymbol || $specificSymbol || $variableSymbol">
+                    <tr n:if="$variableSymbol">
+                        <td style="text-align: right;">Variabilní symbol:</td>
+                        <td style="text-align: center;">{$variableSymbol}</td>
+                    </tr>
+                    <tr n:if="$specificSymbol">
+                        <td style="text-align: right;">Specifický symbol:</td>
+                        <td style="text-align: center;">{$specificSymbol}</td>
+                    </tr>
+                    <tr n:if="$constantSymbol">
+                        <td style="text-align: right;">Konstantní symbol:</td>
+                        <td style="text-align: center;">{$constantSymbol}</td>
                     </tr>
                 </table>
             </td>
