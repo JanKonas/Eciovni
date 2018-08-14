@@ -2,8 +2,8 @@
 
 namespace OndrejBrejla\Eciovni;
 
-use Nette\Object;
 use InvalidArgumentException;
+use Nette\SmartObject;
 
 /**
  * TaxImpl - part of Eciovni plugin for Nette Framework.
@@ -12,7 +12,9 @@ use InvalidArgumentException;
  * @license    New BSD License
  * @link       http://github.com/OndrejBrejla/Eciovni
  */
-class TaxImpl extends Object implements Tax {
+class TaxImpl implements Tax {
+
+	use SmartObject;
 
     /** @var double */
     private $taxInUpperDecimal;

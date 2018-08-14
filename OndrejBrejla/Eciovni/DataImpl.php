@@ -2,8 +2,8 @@
 
 namespace OndrejBrejla\Eciovni;
 
-use Nette\Object;
 use DateTime;
+use Nette\SmartObject;
 
 /**
  * DataImpl - part of Eciovni plugin for Nette Framework.
@@ -12,7 +12,9 @@ use DateTime;
  * @license    New BSD License
  * @link       http://github.com/OndrejBrejla/Eciovni
  */
-class DataImpl extends Object implements Data {
+class DataImpl implements Data {
+
+	use SmartObject;
 
     /** @var string */
     private $title;
